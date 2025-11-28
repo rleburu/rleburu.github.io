@@ -5,6 +5,214 @@
 <!-- Support for Academicons -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
+<!-- Vertical Timeline CSS -->
+<style>
+.cd-timeline-wrapper {
+  margin-top: 1.5em;
+}
+.cd-timeline-wrapper h2 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.2em;
+  color: #2c3e50;
+}
+.cd-timeline {
+  padding: 0.8em;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+  display: inline-block;
+  width: 100%;
+}
+html[data-theme="dark"] .cd-timeline-wrapper h2 {
+  color: #e0e0e0;
+}
+.cd-timeline__container {
+  position: relative;
+  padding: 0.5em 0;
+}
+/* Center line */
+.cd-timeline__container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 2px;
+  background: #3498db;
+}
+/* Top indicator - horizontal line */
+.cd-timeline__container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: #3498db;
+}
+/* Bottom indicator - horizontal line */
+.cd-timeline__end {
+  width: 20px;
+  height: 2px;
+  background: #3498db;
+  margin: 0.5em auto 0;
+}
+.cd-timeline__block {
+  position: relative;
+  margin: 0.5em 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.cd-timeline__block:first-child { margin-top: 0.3em; }
+.cd-timeline__block:last-child { margin-bottom: 0; }
+/* Odd items on left - aligned to center line */
+.cd-timeline__block:nth-child(odd) {
+  justify-content: flex-end;
+  padding-right: calc(50% + 12px);
+}
+/* Even items on right - aligned to center line */
+.cd-timeline__block:nth-child(even) {
+  justify-content: flex-start;
+  padding-left: calc(50% + 12px);
+}
+.cd-timeline__img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3498db;
+  z-index: 1;
+}
+.cd-timeline__content {
+  background: #fff;
+  border-radius: 4px;
+  padding: 0.4em 0.6em;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  max-width: 100%;
+}
+.cd-timeline__content:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.cd-timeline__header {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  flex-wrap: wrap;
+}
+.cd-timeline__content h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 0.7em;
+}
+.cd-timeline__content h3 a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+.cd-timeline__content h3 a:hover {
+  color: #3498db;
+}
+.cd-timeline__date {
+  display: inline-block;
+  padding: 0.1em 0.4em;
+  background: #3498db;
+  color: white;
+  font-size: 0.6em;
+  font-weight: 600;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.cd-timeline__content p {
+  margin: 0.15em 0 0 0;
+  color: #666;
+  line-height: 1.3;
+  font-size: 0.7em;
+}
+.cd-timeline__content p a {
+  color: #3498db;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+.back-to-top:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+.back-to-top.visible {
+  display: flex;
+}
+
+/* Dark mode support */
+html[data-theme="dark"] .cd-timeline {
+  background: #1a1a1a;
+  border-color: #444;
+}
+html[data-theme="dark"] .cd-timeline__container::before,
+html[data-theme="dark"] .cd-timeline__container::after,
+html[data-theme="dark"] .cd-timeline__end {
+  background: #5dade2;
+}
+html[data-theme="dark"] .cd-timeline__img {
+  background: #5dade2;
+}
+html[data-theme="dark"] .cd-timeline__content {
+  background: #2d2d2d;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+html[data-theme="dark"] .cd-timeline__content:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+html[data-theme="dark"] .cd-timeline__content h3 {
+  color: #e0e0e0;
+}
+html[data-theme="dark"] .cd-timeline__content h3 a {
+  color: #e0e0e0;
+}
+html[data-theme="dark"] .cd-timeline__content h3 a:hover {
+  color: #5dade2;
+}
+html[data-theme="dark"] .cd-timeline__date {
+  background: #5dade2;
+  color: #1a1a1a;
+}
+html[data-theme="dark"] .cd-timeline__content p {
+  color: #b0b0b0;
+}
+html[data-theme="dark"] .cd-timeline__content p a {
+  color: #5dade2;
+}
+html[data-theme="dark"] .back-to-top {
+  background: #5dade2;
+  color: #1a1a1a;
+}
+html[data-theme="dark"] .back-to-top:hover {
+  background: #3498db;
+}
+</style>
+
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
 <link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
