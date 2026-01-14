@@ -21,9 +21,9 @@ Outside of work, I enjoy working with sports analytics and running.
         <div class="cd-timeline__content">
           <div class="cd-timeline__header">
             <span class="cd-timeline__date">Jan 2026</span>
-            <h3><a href="https://arxiv.org/abs/2601.08594">First arXiv Preprint</a></h3>
+            <h3><a href="https://arxiv.org/abs/2601.08594">Differentiating through SDEs: A Primer</a></h3>
           </div>
-          <p>Posted "Differentiating through Stochastic Differential Equations: A Primer" on arXiv.</p>
+          <p>First arXiv preprint posted.</p>
         </div>
       </div>
       <div class="cd-timeline__block">
