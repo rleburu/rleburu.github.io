@@ -20,6 +20,16 @@ Outside of work, I enjoy working with sports analytics and running.
         <div class="cd-timeline__img"></div>
         <div class="cd-timeline__content">
           <div class="cd-timeline__header">
+            <span class="cd-timeline__date">Jan 2026</span>
+            <h3><a href="https://arxiv.org/abs/2601.08594">First arXiv Preprint</a></h3>
+          </div>
+          <p>Posted "Differentiating through Stochastic Differential Equations: A Primer" on arXiv.</p>
+        </div>
+      </div>
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img"></div>
+        <div class="cd-timeline__content">
+          <div class="cd-timeline__header">
             <span class="cd-timeline__date">Summer 2025</span>
             <h3><a href="https://www.ornl.gov/">Oak Ridge National Laboratory</a></h3>
           </div>

@@ -6,7 +6,7 @@ author_profile: true
 
 ## Papers
 
-1. **[In Progress]** **R. Leburu**, L. Nurbekyan, & L. Ruthotto. *Differentiating through Stochastic Differential Equations: A Primer.*
+1. **R. Leburu**, L. Nurbekyan, & L. Ruthotto. *Differentiating through Stochastic Differential Equations: A Primer.* [[arXiv]](https://arxiv.org/abs/2601.08594)
 
 2. **[In Progress]** **R. Leburu**, L. Nurbekyan, L. Ruthotto, & G. Zhang. *Matching Algorithms for High-Dimensional Stochastic Optimal Control.*
 
