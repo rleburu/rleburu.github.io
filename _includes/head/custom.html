@@ -22,6 +22,8 @@
   background: #fafafa;
   display: inline-block;
   width: 100%;
+  max-height: 500px;
+  overflow-y: auto;
 }
 html[data-theme="dark"] .cd-timeline-wrapper h2 {
   color: #e0e0e0;
@@ -29,8 +31,6 @@ html[data-theme="dark"] .cd-timeline-wrapper h2 {
 .cd-timeline__container {
   position: relative;
   padding: 0.5em 0;
-  max-height: 400px;
-  overflow-y: auto;
 }
 /* Center line */
 .cd-timeline__container::before {
